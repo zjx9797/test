@@ -2,7 +2,9 @@
   height: 45px;
   padding: 0 8px;
   background-color: #fff;
+  position: fixed;
   display: flex;
+  z-index: 999;
 }
 .mmm_layout .mmm_header .logo {
   height: 40px;
@@ -46,6 +48,10 @@
   border-radius: 10px;
   font-size: 12px;
   text-align: center;
+}
+.mmm_layout .mmm_content {
+  position: relative;
+  top: 50px;
 }
 .mmm_layout .mmm_footer .foot_top {
   margin-top: 20px;

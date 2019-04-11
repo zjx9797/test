@@ -27,21 +27,7 @@
             <div class="download"><a target="_blank" href="https://at.umeng.com/onelink/Pvmmmy">下载</a></div>
         </div>
         <div class="mmm_content">
-            <ul class="mui-table-view">
-                <li class="mui-table-view-cell mui-collapse">
-                    <a class="mui-navigate-right" href="#">大家电</a>
-                    <div class="mui-collapse-content">
-                        <span>电视</span>
-                        <span>影院</span>
-                        <span>冰箱</span>
-                        <span>音响</span>
-                        <span>洗衣机</span>
-                        <span>热水器</span>
-                        <span>酒柜</span>
-                        <span>空调</span>
-                    </div>
-                </li>
-            </ul>
+
         </div>
         <div class="mmm_footer">
             <div class="foot_top">
@@ -62,9 +48,28 @@
             </div>
         </div>
     </div>
+    <script type="text/template" id="catetitleTemp">
+        {{each result value index}}
+        <ul class="mui-table-view">
+                <li class="mui-table-view-cell mui-collapse">
+                    <a class="mui-navigate-right catatitle" href="#">{{value.title}}</a>
+                    <div class="mui-collapse-content mmm_titlecontent" data-titleid="{{value.titleId}}">
+                        
+                    </div>
+                </li>
+            </ul>
+            {{/each}}
+    </script>
+    <script type="text/template" id="titleidTemp">
+        {{each result value index}}
+        <div class="catelist"><a href="productlist.html?categoryid={{value.categoryId}}&category={{value.category}}">{{value.category}}</a></div>
+        {{/each}}
+    </script>
     <script src="../lib/mui/js/mui.min.js"></script>
     <script src="../lib/zepto/zepto.js"></script>
     <script src="../lib/arttemplate/template-web.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/category.js"></script>
 </body>
 
 </html>
