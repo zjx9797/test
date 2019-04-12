@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../styles/getproduct.css">
+</head>
+
+<body>
+    <div class="mmm_layout">
+        <div class="mmm_header">
+            <div class="logo">
+                <h1>
+                    <a href="https://m.manmanbuy.com/"><img src="../static/images/mlogo.png"></a>
+                </h1>
+            </div>
+            <div class="searchbox">
+                <form action="Search" method="get">
+                    <span class="mui-icon mui-icon-search"></span>
+                    <input type="text" name="key" placeholder="商品比价、查历史价">
+                </form>
+            </div>
+            <div class="download"><a target="_blank" href="https://at.umeng.com/onelink/Pvmmmy">下载</a></div>
+        </div>
+        <div class="scroller">
+            <ul class="clearfix">
+               <li><a href="https://m.manmanbuy.com/" class="on">首页</a></li>
+               <li><a href="cuxiao.aspx">省钱控</a></li>
+               <li><a href="http://tool.manmanbuy.com/m/history.aspx">查历史价</a></li>
+               <li><a href="listclass.aspx">比价搜索</a></li>
+               <li><a href="guoneizhekou.aspx">国内折扣</a></li>
+               <li><a href="http://baicai.manmanbuy.com/m/index.aspx">白菜价</a></li>
+               <li><a href="http://m.manmanbuy.com/defaultsharehot.aspx">商城商标</a></li>
+            </ul>
+        </div>
+        <div class="mmm_content">
+            <section id="productList">
+                <!-- 分类标题区域 -->
+                <div class="listcon">
+
+                </div>
+                <div class="pinglun">
+
+                </div>
+            </section>
+        </div>
+        <div class="mmm_footer">
+            <div class="foot_top">
+                <a href="login.aspx">登录</a>
+                <a href="reg.aspx">注册</a>
+                <a href="#" style="width: 40%;">
+                    <img src="../static/images/top.jpg" width="15" height="15">返回顶部
+                </a>
+            </div>
+            <div class="footer">
+                <p>
+                    <a href="https://at.umeng.com/onelink/Pvmmmy" onclick="trackEvent('footer下载');"
+                        style="color: Red;">手机APP下载</a> <a href="http://m.manmanbuy.com">
+                        慢慢买手机版</a> -- 掌上比价平台</p>
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </div>
+    </div>
+    <script type="text/template" id="getprodTemp">
+        {{each result v i}}
+        <div class="category-title">
+                <ol class="breadcrumb">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">全部分类</a></li>
+                    <li>空调-{{v.productName.substring(0,4)}}...</li>
+                </ol>
+                <a href="#" class="btn btn-default">筛选</a>
+            </div>
+            <!-- 主体商品区域 -->
+            <div class="detail-head ui-border-b">
+                    <div class="pic">
+                            {{@v.productImg}}
+                        </div>
+                        <div class="tit">{{v.productName}}<span></span></div>
+                        <div class="inf clearfix" style="padding-bottom:20px;">
+                            <ul>
+                                <li class="price"><span>当前最低</span><em>:&nbsp;<i>¥4998.00 </i></em></li>
+                                <li class="comment"><span>优选评论</span><em>:&nbsp;6297条</em></li>
+                            </ul>
+                        </div>
+                        {{@v.bjShop}}
+            </div>
+        
+        {{/each}}
+    </script>
+    <script type="text/template" id="pinglunTemp">
+        {{each result v i}}
+        <div class="pj_list">
+                <table width="100%">
+                    <tbody>
+                        <tr>
+                            <td class="name">{{v.comName}}</td>
+                            <td>{{v.comTime}}</td>
+                        </tr>
+                        <tr>
+                            <td> <span class="mui-icon mui-icon-star"></span><span class="mui-icon mui-icon-star"></span><span class="mui-icon mui-icon-star"></span><span class="mui-icon mui-icon-star"></span><span class="mui-icon mui-icon-star"></span></td>
+                            <td>{{v.comFrom}}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="pj_C">
+                                {{v.comContent}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="pj_C"><a href="discomment.aspx?id=333752&amp;cid=11317737"
+                                    style="font-size:12px; color:#999;">回复</a> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            {{/each}}
+    </script>
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <script src="../lib/zepto/zepto.js"></script>
+    <script src="../lib/arttemplate/template-web.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/getproduct.js"></script>
+</body>
+
+</html>

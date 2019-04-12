@@ -178,12 +178,12 @@ ul {
   background-color: #fff;
   position: relative;
   top: 75px;
-  margin-bottom: 20px;
 }
 .mmm_layout .mmm_content #productList .category-title > .breadcrumb {
   padding-top: 10px;
   padding-left: 14px;
   display: flex;
+  margin-bottom: 0px;
 }
 .mmm_layout .mmm_content #productList .category-title > .breadcrumb > li {
   font-size: 13px;
@@ -201,7 +201,7 @@ ul {
 .mmm_layout .mmm_content #productList .category-title > .btn-default {
   position: absolute;
   right: 10px;
-  top: 2px;
+  top: 6px;
   display: block;
   padding: 0 10px;
   font-size: 12px;
@@ -211,36 +211,38 @@ ul {
   background-color: #ddd;
   color: #333;
 }
-.mmm_layout .mmm_content #productList > .product-list {
-  margin-bottom: 50px;
+.mmm_layout .mmm_content #productList .ui-border-b {
+  margin-top: 60px;
+  background-color: #fff;
+  padding: 10px 8px;
 }
-.mmm_layout .mmm_content #productList > .product-list > .media {
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
+.mmm_layout .mmm_content #productList .ui-border-b img {
+  display: block;
+  margin: auto;
+}
+.mmm_layout .mmm_content #productList .ui-border-b .inf {
+  margin-top: 20px;
+}
+.mmm_layout .mmm_content #productList .ui-border-b .inf ul {
   display: flex;
-  position: relative;
-  top: 45px;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #aaa;
 }
-.mmm_layout .mmm_content #productList > .product-list > .media > a {
-  flex: 1;
+.mmm_layout .mmm_content #productList .pinglun {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #aaa;
 }
-.mmm_layout .mmm_content #productList > .product-list > .media > a img {
-  height: 100%;
-  width: 100%;
+.mmm_layout .mmm_content #productList .pinglun .pj_list {
+  padding: 0 10px;
+  margin-bottom: 6px;
+  background-color: #fff;
 }
-.mmm_layout .mmm_content #productList > .product-list > .media > .media-body {
-  margin-left: 10px;
-  flex: 3;
-}
-.mmm_layout .mmm_content #productList > .product-list > .media > .media-body > .price {
-  color: #e92322;
-}
-.mmm_layout .mmm_content #productList > .product-list > .media > .media-body > em {
-  font-size: 12px;
-  color: #666;
-}
-.mmm_layout .mmm_content #productList > .product-list > .media > .media-body > em:last-child {
-  margin-left: 10px;
+.mmm_layout .mmm_content #productList .pinglun .pj_list tbody .pj_C {
+  color: #333;
+  padding: 10px 0px 0 0px;
+  font-size: 14px;
 }
 .mmm_layout .mmm_footer .foot_top {
   margin-top: 50px;
