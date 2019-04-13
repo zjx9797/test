@@ -1,0 +1,96 @@
+.mmm_layout .mmm_header {
+  width: 100%;
+  height: 45px;
+  padding: 0 8px;
+  background-color: #fff;
+  position: fixed;
+  display: flex;
+  z-index: 999;
+}
+.mmm_layout .mmm_header .logo {
+  width: 90px;
+  height: 40px;
+  padding-top: 8px;
+}
+.mmm_layout .mmm_header .logo img {
+  width: 100%;
+}
+.mmm_layout .mmm_header .searchbox {
+  padding: 6px 10px;
+  flex: 1;
+}
+.mmm_layout .mmm_header .searchbox form {
+  position: relative;
+}
+.mmm_layout .mmm_header .searchbox form span {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  font-size: 18px;
+}
+.mmm_layout .mmm_header .searchbox form input {
+  width: 100%;
+  height: 30px;
+  border-radius: 15px;
+  text-indent: 10px;
+  background-color: #eee;
+  font-size: 14px;
+}
+.mmm_layout .mmm_header .download {
+  margin-top: 8px;
+  width: 42px;
+}
+.mmm_layout .mmm_header .download a {
+  display: block;
+  padding: 4px;
+  border: 1px solid #f00;
+  color: #f00;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-size: 12px;
+  text-align: center;
+}
+.mmm_layout .scroller {
+  width: 100%;
+  line-height: 30px;
+  text-align: center;
+  position: fixed;
+  top: 45px;
+  z-index: 998;
+  background-color: #fff;
+}
+.mmm_layout .scroller ul {
+  display: flex;
+  font-size: 12px;
+}
+.mmm_layout .scroller ul li {
+  flex: 1;
+}
+.mmm_layout .scroller ul li a {
+  color: #333;
+}
+.mmm_layout .mmm_content {
+  position: relative;
+  top: 50px;
+}
+.mmm_layout .mmm_footer .foot_top {
+  margin-top: 20px;
+  display: flex;
+}
+.mmm_layout .mmm_footer .foot_top a {
+  display: block;
+  flex: 1;
+  line-height: 33px;
+  text-align: center;
+  border: 1px solid #ccc;
+  color: #333;
+  font-size: 14px;
+}
+.mmm_layout .mmm_footer .footer {
+  margin: 15px 0;
+}
+.mmm_layout .mmm_footer .footer p {
+  line-height: 22px;
+  font-size: 12px;
+  text-align: center;
+}

@@ -1,0 +1,102 @@
+
+.mmm_layout{
+    .mmm_header {
+        width: 100%;
+        height: 45px;
+        padding: 0 8px;
+        background-color: #fff;
+        position: fixed;
+        display: flex;
+        z-index: 999;
+        .logo {
+            width: 90px;
+            height: 40px;
+            padding-top: 8px;
+            img {
+                width: 100%;
+            }
+        }
+        .searchbox {
+            padding: 6px 10px;
+            flex: 1;
+            form {
+                position: relative;
+                span {
+                    position: absolute;
+                    top: 6px;
+                    left: 8px;
+                    font-size: 18px;
+                }
+                input {
+                    width: 100%;
+                    height: 30px;
+                    border-radius: 15px;
+                    text-indent: 10px;
+                    background-color: #eee;
+                    font-size: 14px;
+                }
+            }
+        }
+        .download {
+            margin-top: 8px;
+            width: 42px;
+            a {
+                display: block;
+                padding: 4px;
+                border: 1px solid #f00;
+                color: #f00;
+                box-sizing: border-box;
+                border-radius: 10px;
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+    }
+    .scroller {
+        width: 100%;
+        line-height: 30px;
+        text-align: center;
+        position: fixed;
+        top: 45px;
+        z-index: 998;
+        background-color: #fff;
+        ul {
+            display: flex;
+            font-size: 12px;
+            li {
+                flex: 1;
+                a {
+                    color: #333;
+                }
+            }
+        }
+    }
+    .mmm_content {
+        position: relative;
+        top: 50px;
+    }
+    .mmm_footer {
+        .foot_top {
+            margin-top: 20px;
+            display: flex;
+            a {
+                display: block;
+                flex: 1;
+                line-height: 33px;
+                text-align: center;
+                border: 1px solid #ccc;
+                color: #333;
+                font-size: 14px;
+            }
+            
+        }
+        .footer {
+            margin: 15px 0;
+            p {
+                line-height: 22px;
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+    }
+    }

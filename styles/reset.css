@@ -91,16 +91,11 @@ ol,
 ul {
   list-style: none;
 }
-.clearfix:after {
-  content: "020";
+.clearfix::before {
+  content: "";
   display: block;
-  font-size: 0px;
-  line-height: 0px;
-  height: 0;
   clear: both;
   visibility: hidden;
-}
-.clearfix {
-  zoom: 1;
-  /*为IE6，7的兼容性设置*/
+  height: 0;
+  font-size: 0;
 }
