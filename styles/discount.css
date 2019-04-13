@@ -92,13 +92,18 @@ ol,
 ul {
   list-style: none;
 }
-.clearfix::before {
-  content: "";
+.clearfix:after {
+  content: "020";
   display: block;
+  font-size: 0px;
+  line-height: 0px;
+  height: 0;
   clear: both;
   visibility: hidden;
-  height: 0;
-  font-size: 0;
+}
+.clearfix {
+  zoom: 1;
+  /*为IE6，7的兼容性设置*/
 }
 .mmm_layout {
   display: flex;
@@ -107,8 +112,8 @@ ul {
 .mmm_content {
   flex: 1;
   position: relative;
-  top: 75px;
-  margin: 0px 0 60px 0;
+  top: 95px;
+  margin: 30px 0 60px 0;
 }
 .mmm_content > ul {
   display: flex;

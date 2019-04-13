@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
     <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
-    <link rel="stylesheet" href="../styles/shopNav.css">
+    <link rel="stylesheet" href="../styles/saveMoney.css">
+    <title>Document</title>
 </head>
 
 <body>
@@ -28,18 +28,24 @@
         </div>
         <div class="scroller">
             <ul class="clearfix">
-                <li><a href="https://m.manmanbuy.com/" class="on">首页</a></li>
-                <li><a href="cuxiao.aspx">省钱控</a></li>
-                <li><a href="http://tool.manmanbuy.com/m/history.aspx">优惠价</a></li>
+                <li><a href="../index.html" class="on">首页</a></li>
+                <li><a href="./moneyctrl.html">省钱控</a></li>
+                <li><a href="./coupon.html">优惠价</a></li>
                 <li><a href="./category.html">比价搜索</a></li>
-                <li><a href="guoneizhekou.aspx">国内折扣</a></li>
+                <li><a href="./inlanddiscount.html">国内折扣</a></li>
                 <li><a href="./baicaijia.html">白菜价</a></li>
-                <li><a href="./shopNav.html">商城商标</a></li>
+                <li><a href="./sitenav.html">商城商标</a></li>
             </ul>
         </div>
         <div class="mmm_content">
-            <div class="navlist">
-
+            <div class="mmm_list">
+            </div>
+            <div class="paging">
+                <!-- <input type="button" value="上一页" class="btn btn-default pull-left"> -->
+                <a href="#" class="mui-btn page-prev">上一页</a>
+                <a href="#" class="mui-btn page-page">第1页</a>
+                <a href="#" class="mui-btn page-next">下一页</a>
+                <!-- <input type="button" value="下一页" class="btn btn-default pull-right"> -->
             </div>
         </div>
         <div class="mmm_footer">
@@ -61,16 +67,26 @@
             </div>
         </div>
     </div>
-    <script type="text/template" id="navlistTemp">
-        {{each result v i}}
-        <a href="{{v.navHref}}"><img src="{{v.navImg}}" alt="">{{v.navTitle}}</a>
-        {{/each}}
+    <script type="text/template" id="PolicyTemp">
+        {{each result value index}}
+        <div class="media">
+                <a class="media-left" href="#">
+                    {{@value.productImgSm}}
+                </a>
+                <div class="media-body">
+                    <div class='Description'><a href="moneyproduct.html?productid={{value.productId}}">{{value.productName}}</a></div>
+                    <div class="price">{{value.productPinkage}}包邮</div>
+                    <span class="from">{{value.productFrom}} | {{value.productTime}}</span>
+                    <span class="comment"><i class="mui-icon mui-icon-chatboxes"></i>{{value.productComCount}}</span>
+                </div>
+            </div>
+            {{/each}}
     </script>
-    <script src="../lib/mui/js/mui.min.js"></script>
-    <script src="../lib/zepto/zepto.js"></script>
-    <script src="../lib/arttemplate/template-web.js"></script>
-    <script src="../js/common.js"></script>
-    <script src="../js/shopNav.js"></script>
 </body>
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../js/register.js"></script>
+<script src="../js/saveMoney.js"></script>
 
 </html>

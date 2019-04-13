@@ -6,58 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
-    <link rel="stylesheet" href="../styles/inlanddiscount.css">
-    <title>国内折扣</title>
+    <link rel="stylesheet" href="../styles/discount.css">
+    <title>Document</title>
 </head>
+
 <body>
-    <div class="layout">
+    <div class="mmm_layout">
         <div class="mmm_header">
-            <a href="./discount.html" class="mui-icon mui-icon-arrowleft ioc"></a>
-            <form action="">
-                <input type="text" placeholder="请输入商品名称">
-                <div class="search mui-icon mui-icon-search"></div>
-            </form>
-            <div class="download">下载</div>
+            <div class="logo">
+                <h1>
+                    <a href="https://m.manmanbuy.com/"><img src="../static/images/mlogo.png"></a>
+                </h1>
+            </div>
+            <div class="searchbox">
+                <form action="Search" method="get">
+                    <span class="mui-icon mui-icon-search"></span>
+                    <input type="text" name="key" placeholder="商品比价、查历史价">
+                </form>
+            </div>
+            <div class="download"><a target="_blank" href="https://at.umeng.com/onelink/Pvmmmy">下载</a></div>
+        </div>
+        <div class="scroller">
+            <ul class="clearfix">
+                <li><a href="../index.html" class="on">首页</a></li>
+                <li><a href="./moneyctrl.html">省钱控</a></li>
+                <li><a href="./coupon.html">优惠价</a></li>
+                <li><a href="./category.html">比价搜索</a></li>
+                <li><a href="./inlanddiscount.html">国内折扣</a></li>
+                <li><a href="./baicaijia.html">白菜价</a></li>
+                <li><a href="./sitenav.html">商城商标</a></li>
+            </ul>
         </div>
         <div class="mmm_content">
+            <ul>
 
+            </ul>
+        </div>
+        <div class="mmm_footer">
+            <div class="foot_top">
+                <a href="login.aspx">登录</a>
+                <a href="reg.aspx">注册</a>
+                <a href="#" style="width: 40%;">
+                    <img src="../static/images/top.jpg" width="15" height="15">返回顶部
+                </a>
+            </div>
+            <div class="footer">
+                <p>
+                    <a href="https://at.umeng.com/onelink/Pvmmmy" onclick="trackEvent('footer下载');"
+                        style="color: Red;">手机APP下载</a> <a href="http://m.manmanbuy.com">
+                        慢慢买手机版</a> -- 掌上比价平台</p>
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
         </div>
     </div>
-    <script type="text/template" id="moneyProductTmp">
+    <script type="text/template" id="discountProductTmp">
         {{each result value index}}
-        <div class="mmm_matter">
-                <div class="pic">
-                    {{@value.productImg}}
-                </div>
-                <div class="info">
-                    <span>{{value.productFrom}} | {{value.productTime}} | {{value.productTips}}</span>
-                </div>
-                <h2>{{value.productName}}</h2>
-                <h3>{{value.productPrice}}</h3>
-                <div class="golink"><a href="javascript:;">直达链接</a></div>
-                <div class="conn">
-                    <p>
-                        {{value.productInfo2}}
-                    </p>
-                    <p>
-                        {{value.productInfo}}
-                    </p>
-                </div>
-                <div class="mmm_matter_img">
-                    <img src="../static/images/mmbweixin2.png" alt="">
-                </div>
-            </div>
-            <div class="mmm_comment">
-                <div class="title">最新评论</div>
-                {{@value.productComment}}
-            </div>
-        {{/each}}
+            <li class="border-img">
+                <a href="shabi.html?productid={{value.productId}}" title="《皮囊》 19.9元">
+                    <div class="img">{{@value.productImg}}</div>
+                    <div class="title">{{value.productName}}</div>
+                    <div class="subtit">{{value.productPrice}}</div>
+                    <div class="info">
+                        <div class="mall">{{value.productFrom}} | {{value.productTime}}</div>
+                    </div>
+                </a>
+            </li>
+            {{/each}}
     </script>
     <script src="../lib/mui/js/mui.min.js"></script>
     <script src="../lib/arttemplate/template-web.js"></script>
     <script src="../lib/zepto/zepto.js"></script>
     <script src="../js/register.js"></script>
-    <script src="../js/inlanddiscount.js"></script>
+    <script src="../js/discount.js"></script>
 </body>
 
 </html>

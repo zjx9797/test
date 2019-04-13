@@ -200,6 +200,9 @@ ul {
   font-size: 12px;
   text-align: center;
 }
+.mmm_content {
+  margin-bottom: 50px;
+}
 .mmm_content .mui-table-view {
   position: relative;
   top: 35px;
