@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../lib/mui/css/mui.css">
+  <link rel="stylesheet" href="../styles/getSinglePro.css">
+  <title>Document</title>
+</head>
+
+<body class="">
+  <div class="layout">
+    <!-- 顶部 -->
+    <header id="header" class="mui-bar mui-bar-nav">
+      <h1 class="mui-title">凑单品</h1>
+      <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+      <a class="mui-pull-right mmm_app">
+        <span class="mui-icon mui-icon-download"></span>
+        <span>APP下载</span>
+      </a>
+    </header>
+    <!-- 主体内容 -->
+    <div class="mmm_content">
+      <div class="sp_nav">
+        <ul class="filter">
+          <li>
+            <a class="shop" href="#">
+              <span class="txt">京东</span>
+              <span class="mui-icon mui-icon-arrowdown"></span>
+            </a>
+          </li>
+          <li>
+            <a class="area" href="#">
+              <span class="txt">华北</span>
+              <span class="mui-icon mui-icon-arrowdown"></span>
+            </a>
+          </li>
+          <li>
+            <a class="" href="#">全部价格<span class="mui-icon mui-icon-arrowdown"></span></a>
+          </li>
+          <li>
+            <a class="mui-icon mui-icon-search" href="#"></a>
+          </li>
+        </ul>
+        <!-- 各种下拉列表 -->
+        <ul class="sp_store">
+
+        </ul>
+        <ul class="sp_area">
+
+        </ul>
+      </div>
+      <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+          <ul class="singleProList">
+
+
+          </ul>
+          <div class="mmm_footer">
+            <div class="foot_top">
+              <a href="login.aspx">登录</a>
+              <a href="reg.aspx">注册</a>
+              <a href="#" style="width: 40%;">
+                <img src="../static/images/top.jpg" width="15" height="15">返回顶部
+              </a>
+            </div>
+            <div class="footer">
+              <p>
+                <a href="https://at.umeng.com/onelink/Pvmmmy" onclick="trackEvent('footer下载');"
+                  style="color: Red;">手机APP下载</a> <a href="http://m.manmanbuy.com">
+                  慢慢买手机版</a> -- 掌上比价平台</p>
+              <p>
+                m.manmanbuy.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script type="text/template" id="storeTemp">
+    {{each result value index}}
+    <li class="{{index==0?'active':''}}"><a href="#" data-shopid="{{value.shopId}}">{{value.shopName}}</a></li>
+    {{/each}}
+  </script>
+  <script type="text/template" id="areaTemp">
+    {{each result value index}}
+    <li class="{{index==0?'active':''}}"><a href="#" data-areaid="{{value.areaId}}">{{value.areaName}}</a></li>
+    {{/each}}
+  </script>
+  <script type="text/template" id="proListTemp">
+    {{each result value index}}
+    <li>
+      <a href="javascript:;">
+        <img src="{{value.productImg}}" alt="">
+        <div class="mui-ellipsis">{{value.productName}}</div>
+        <div class="others">
+          <span>{{value.productPrice}}</span>
+          <input type="button" value="去凑单">
+        </div>
+      </a>
+    </li>
+    {{/each}}
+  </script>
+  <script src="../lib/mui/js/mui.js"></script>
+  <script src="../lib/zepto/zepto.js"></script>
+  <script src="../lib/arttemplate/template-web.js"></script>
+  <script src="../lib/iscroll/iscroll.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/getSinglePro.js"></script>
+</body>
+
+</html>
