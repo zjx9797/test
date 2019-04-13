@@ -1,0 +1,111 @@
+/*footer*/
+.footer {
+  background: #efefef;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px 0;
+  color: #666;
+}
+.foot_top {
+  background: #efefef;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  height: 34px;
+  line-height: 34px;
+  margin-top: 25px;
+  clear: both;
+}
+.foot_top a {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  font-size: 14px;
+  border-right: 1px solid #c4c4c4;
+  text-align: center;
+  width: 30%;
+}
+.foot_top a img {
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-right: 2px;
+}
+.mmm_header {
+  height: 45px;
+  width: 100%;
+  padding: 0 8px;
+  background-color: #fff;
+  position: fixed;
+  display: flex;
+  z-index: 999;
+}
+.mmm_header .logo {
+  width: 27%;
+  height: 40px;
+  flex: 2;
+  padding-top: 5px;
+}
+.mmm_header .logo h1 {
+  height: 30px;
+}
+.mmm_header .logo img {
+  display: block;
+  width: 100%;
+  max-height: 30px;
+  max-width: 100%;
+}
+.mmm_header .searchbox {
+  padding: 6px 10px;
+  flex: 5;
+}
+.mmm_header .searchbox form {
+  position: relative;
+}
+.mmm_header .searchbox form span {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  font-size: 18px;
+}
+.mmm_header .searchbox form input {
+  width: 100%;
+  height: 30px;
+  border-radius: 15px;
+  text-indent: 10px;
+  background-color: #eee;
+  font-size: 14px;
+}
+.mmm_header .download {
+  margin-top: 8px;
+  flex: 1;
+}
+.mmm_header .download a {
+  display: block;
+  padding: 4px;
+  border: 1px solid #f00;
+  color: #f00;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-size: 12px;
+  text-align: center;
+}
+.scroller {
+  width: 100%;
+  line-height: 30px;
+  text-align: center;
+  position: fixed;
+  top: 45px;
+  z-index: 998;
+  background-color: #fff;
+}
+.scroller ul {
+  display: flex;
+  font-size: 12px;
+}
+.scroller ul li {
+  flex: 1;
+}
+.scroller ul li a {
+  color: #333;
+}

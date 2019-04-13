@@ -1,0 +1,267 @@
+/*项目所有页面要用到的css初始化文件*/
+/*清除内外边距  */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td,
+span {
+  margin: 0;
+  padding: 0;
+}
+/*让所有斜体 不倾斜*/
+em,
+i {
+  font-style: normal;
+}
+/*去掉列表前面的小点*/
+li {
+  list-style: none;
+}
+/*图片没有边框   去掉图片底侧的空白缝隙*/
+img {
+  /* display:block; */
+  border: 0;
+  /*ie6*/
+  vertical-align: middle;
+}
+/*让button 按钮 变成小手*/
+button {
+  cursor: pointer;
+}
+/*取消链接的下划线*/
+a {
+  color: #666;
+  text-decoration: none;
+}
+a:hover {
+  color: #e33333;
+}
+button,
+input {
+  font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB;
+  border: none;
+  outline: none;
+  vertical-align: middle;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
+  font: 12px Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB;
+  color: #666;
+  /*font-size: 30px;*/
+  /*line-height: 20px;*/
+  /*font: 30px/2 'simsun';*/
+}
+.hide,
+.none {
+  display: none;
+}
+/*清除浮动*/
+.clearfix::after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  content: ".";
+  height: 0;
+}
+.clearfix {
+  *zoom: 1;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.al {
+  text-align: left;
+}
+.ac {
+  text-align: center;
+}
+.ar {
+  text-align: right;
+}
+.pr {
+  position: relative;
+}
+html {
+  touch-action: none;
+}
+/* 项目页面公共部分样式 */
+.pyg_head {
+  height: 45px;
+  width: 100%;
+  background-color: #fff;
+  padding: 5px;
+}
+.pag_base {
+  width: 100%;
+  height: 45px;
+  margin-top: 30px;
+}
+.pag_base a > span {
+  font-size: 13px;
+  color: #000;
+}
+/* 当前页面需要滚动时添加此样式 */
+.os {
+  overflow: scroll;
+}
+.mmm_layout {
+  width: 100vw
+  ;
+  height: 100vh;
+  max-width: 960px;
+  display: flex;
+}
+.mmm_header {
+  width: 100%;
+  height: 45px;
+}
+.mmm_content {
+  width: 100%;
+  flex: 1;
+}
+.mmm_content .crumbs {
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  margin-top: 20px;
+  padding-left: 20px;
+}
+.mmm_content .crumbs {
+  height: 40px;
+}
+.mmm_content .crumbs ul {
+  display: inline-block;
+}
+.mmm_content .crumbs ul > li {
+  float: right;
+  padding: 5px 5px;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  margin: 0px 0 0 -20px;
+  border-radius: 0 50px 50px 0;
+}
+.mmm_content .crumbs ul > li > a {
+  display: block;
+  overflow: hidden;
+  min-width: 50px;
+  color: #fff;
+  text-align: center;
+  border-radius: 0 50px 50px 0;
+  box-sizing: border-box;
+  height: 30px;
+  line-height: 30px;
+  padding-right: 10px;
+  padding-left: 20px;
+  background-color: #ff841d;
+}
+.mmm_content .crumbs ul > li > a > .text {
+  font-size: 15px;
+  display: inline-block;
+}
+.mmm_layout {
+  width: 100vw;
+  height: 100vh;
+  background-color: #eee;
+}
+.mmm_content .menu {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 15px 0;
+}
+.mmm_content .menu ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.mmm_content .menu ul li {
+  width: 25%;
+  text-align: center;
+}
+.mmm_content .menu ul li img {
+  margin-top: 5px;
+  width: 60%;
+}
+.mmm_content .menu ul li p {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #000;
+}
+.mmm_content .mui-scroll {
+  top: 45px;
+  padding-bottom: 30px;
+}
+.mmm_content .mui-scroll a > .jxhd {
+  height: 35px;
+  background-color: #ff9b1b;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+  padding: 0px 10px;
+}
+.mmm_content .mui-scroll a > .jxhd > span {
+  font-size: 18px;
+  line-height: 35px;
+  font-weight: 600;
+  color: #fff;
+}
+.mmm_content .mui-scroll a > .jxhd > img {
+  float: right;
+  width: 20px;
+  color: #fff;
+  margin-top: 8px;
+  margin-right: 8px;
+}
+.mmm_content .details li {
+  margin-top: 10px;
+  background-color: #fff;
+}
+.mmm_content .details li > a {
+  display: flex;
+}
+.mmm_content .details li > a .details_img {
+  flex: 1;
+}
+.mmm_content .details li > a .details_img img {
+  width: 90%;
+}
+.mmm_content .details li > a .details_name {
+  flex: 2;
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.mmm_content .details li > a .details_name p:nth-of-type(1) {
+  width: 100%;
+  font-size: 20px;
+  color: #000;
+}
+.mmm_content .details li > a .details_name p:nth-of-type(2) {
+  width: 100%;
+  font-size: 20px;
+  color: #ff6c00;
+}
+.mmm_content .details li > a .details_name p:nth-of-type(3) {
+  width: 100%;
+  font-size: 15px;
+  color: #000;
+}
