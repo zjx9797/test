@@ -24,6 +24,7 @@ $(function() {
                     }
                 })
             }
+            sessionStorage.setItem('prodhref',location.href);
                 $('.lastpage').on('tap',function() {
                     if(pageid>1) {
                         pageid--;

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../styles/baicaijia.css">
+</head>
+
+<body>
+    <div class="mmm_layout">
+        <div class="mmm_header">
+            <div class="logo">
+                <h1>
+                    <a href="https://m.manmanbuy.com/"><img src="../static/images/mlogo.png"></a>
+                </h1>
+            </div>
+            <div class="searchbox">
+                <form action="Search" method="get">
+                    <span class="mui-icon mui-icon-search"></span>
+                    <input type="text" name="key" placeholder="商品比价、查历史价">
+                </form>
+            </div>
+            <div class="download"><a target="_blank" href="https://at.umeng.com/onelink/Pvmmmy">下载</a></div>
+        </div>
+        <div class="scroller">
+            <ul class="clearfix">
+                <li><a href="https://m.manmanbuy.com/" class="on">首页</a></li>
+                <li><a href="cuxiao.aspx">省钱控</a></li>
+                <li><a href="http://tool.manmanbuy.com/m/history.aspx">优惠价</a></li>
+                <li><a href="./category.html">比价搜索</a></li>
+                <li><a href="guoneizhekou.aspx">国内折扣</a></li>
+                <li><a href="./baicaijia.html">白菜价</a></li>
+                <li><a href="http://m.manmanbuy.com/defaultsharehot.aspx">商城商标</a></li>
+            </ul>
+        </div>
+        <div class="mmm_content">
+            <main class="coupon-title">
+                <div class="bcj-head-cat">
+                    <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                        <div class="mui-scroll">
+                            <div class="bcj-title">
+                                <div class="ul-wapper">
+                                    <ul class="tabs clearfix">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="searchbox" style="width: 375px; display: none;">
+                        <div class="formsch clearfix">
+                            <form method="get" action="baicai.aspx">
+                                <div class="txt">
+                                    <input type="search" name="key" value="" onfocus="delInput();" oninput="delInput();"
+                                        class="border-img" placeholder="请输入搜索关键词" style="width: 317px;">
+                                    <a href="javascript:;" class="a-delput"></a>
+                                </div>
+                                <div class="smt">
+                                    <input type="submit" value="搜索">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="bcj-list">
+                    <ul>
+
+                    </ul>
+                </div>
+            </main>
+        </div>
+        <div class="mmm_footer">
+            <div class="foot_top">
+                <a href="login.aspx">登录</a>
+                <a href="reg.aspx">注册</a>
+                <a href="#" style="width: 40%;">
+                    <img src="../static/images/top.jpg" width="15" height="15">返回顶部
+                </a>
+            </div>
+            <div class="footer">
+                <p>
+                    <a href="https://at.umeng.com/onelink/Pvmmmy" onclick="trackEvent('footer下载');"
+                        style="color: Red;">手机APP下载</a> <a href="http://m.manmanbuy.com">
+                        慢慢买手机版</a> -- 掌上比价平台</p>
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </div>
+    </div>
+    <script type="text/template" id="baicaititTemp">
+        {{each result v i}}
+            <li class="{{i==0?'active':''}}"><a href="#" data-titleid="{{v.titleId}}">{{v.title}}</a></li>
+        {{/each}}
+    </script>
+    <script type="text/template" id="baicailistTemp">
+        {{each result v i}}
+        <li class="ui-border-tb ">
+                <a biz-itemid="538754112089" class="gobuy" isconvert="1"
+                    href="http://s.click.taobao.com/lkqGHQx" target="_blank"></a>
+                <div class="pic"><i></i>{{@v.productImg}}
+                </div>
+                <div class="inf">
+                    <div class="i">
+                        <div class="t">{{@v.productName}}</div>
+                        <div class="pr">{{@v.productPrice}}
+                        </div>
+                    </div>
+                    <div class="o">
+                        <div class="bar clearfix">{{@v.productCouponRemain}}</div>
+                        <div class="b clearfix">
+                            <div class="q">{{@v.productCoupon}}</div>
+                            <div class="g">{{@v.productHref}}</div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        {{/each}}
+    </script>
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <script src="../lib/zepto/zepto.js"></script>
+    <script src="../lib/arttemplate/template-web.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/baicaijia.js"></script>
+</body>
+
+</html>

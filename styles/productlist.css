@@ -181,12 +181,14 @@ ul {
   margin-bottom: 20px;
 }
 .mmm_layout .mmm_content #productList .category-title > .breadcrumb {
-  padding-top: 10px;
   padding-left: 14px;
   display: flex;
+  background-color: #eee;
 }
 .mmm_layout .mmm_content #productList .category-title > .breadcrumb > li {
+  height: 30px;
   font-size: 13px;
+  line-height: 30px;
 }
 .mmm_layout .mmm_content #productList .category-title > .breadcrumb > li a {
   color: #333;
@@ -201,7 +203,7 @@ ul {
 .mmm_layout .mmm_content #productList .category-title > .btn-default {
   position: absolute;
   right: 10px;
-  top: 2px;
+  top: 6px;
   display: block;
   padding: 0 10px;
   font-size: 12px;
