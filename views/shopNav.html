@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
-    <link rel="stylesheet" href="../styles/category.css">
+    <link rel="stylesheet" href="../styles/shopNav.css">
 </head>
 
 <body>
@@ -21,24 +21,26 @@
             <div class="searchbox">
                 <form action="Search" method="get">
                     <span class="mui-icon mui-icon-search"></span>
-                    <input type="text" name="key" placeholder="商品比价、查历史价" >
+                    <input type="text" name="key" placeholder="商品比价、查历史价">
                 </form>
             </div>
             <div class="download"><a target="_blank" href="https://at.umeng.com/onelink/Pvmmmy">下载</a></div>
         </div>
         <div class="scroller">
-                <ul class="clearfix">
-                   <li><a href="https://m.manmanbuy.com/" class="on">首页</a></li>
-                   <li><a href="cuxiao.aspx">省钱控</a></li>
-                   <li><a href="http://tool.manmanbuy.com/m/history.aspx">优惠价</a></li>
-                   <li><a href="./category.html">比价搜索</a></li>
-                   <li><a href="guoneizhekou.aspx">国内折扣</a></li>
-                   <li><a href="./baicaijia.html">白菜价</a></li>
-                   <li><a href="./shopNav.html">商城商标</a></li>
-                </ul>
-            </div>
+            <ul class="clearfix">
+                <li><a href="https://m.manmanbuy.com/" class="on">首页</a></li>
+                <li><a href="cuxiao.aspx">省钱控</a></li>
+                <li><a href="http://tool.manmanbuy.com/m/history.aspx">优惠价</a></li>
+                <li><a href="./category.html">比价搜索</a></li>
+                <li><a href="guoneizhekou.aspx">国内折扣</a></li>
+                <li><a href="./baicaijia.html">白菜价</a></li>
+                <li><a href="./shopNav.html">商城商标</a></li>
+            </ul>
+        </div>
         <div class="mmm_content">
+            <div class="navlist">
 
+            </div>
         </div>
         <div class="mmm_footer">
             <div class="foot_top">
@@ -59,28 +61,16 @@
             </div>
         </div>
     </div>
-    <script type="text/template" id="catetitleTemp">
-        {{each result value index}}
-        <ul class="mui-table-view">
-                <li class="mui-table-view-cell mui-collapse">
-                    <a class="mui-navigate-right catatitle" href="#">{{value.title}}</a>
-                    <div class="mui-collapse-content mmm_titlecontent" data-titleid="{{value.titleId}}">
-                        
-                    </div>
-                </li>
-            </ul>
-            {{/each}}
-    </script>
-    <script type="text/template" id="titleidTemp">
-        {{each result value index}}
-        <div class="catelist"><a href="productlist.html?categoryid={{value.categoryId}}&category={{value.category}}">{{value.category}}</a></div>
+    <script type="text/template" id="navlistTemp">
+        {{each result v i}}
+        <a href="{{v.navHref}}"><img src="{{v.navImg}}" alt="">{{v.navTitle}}</a>
         {{/each}}
     </script>
     <script src="../lib/mui/js/mui.min.js"></script>
     <script src="../lib/zepto/zepto.js"></script>
     <script src="../lib/arttemplate/template-web.js"></script>
     <script src="../js/common.js"></script>
-    <script src="../js/category.js"></script>
+    <script src="../js/shopNav.js"></script>
 </body>
 
 </html>

@@ -1,8 +1,8 @@
 @import './reset.less';
 .mmm_layout{
     .mmm_header {
-        width: 100%;
         height: 45px;
+        width: 100%;
         padding: 0 8px;
         background-color: #fff;
         position: fixed;
@@ -37,7 +37,7 @@
                 }
             }
         }
-        .download {
+    .download {
             margin-top: 8px;
             width: 42px;
             a {
@@ -72,79 +72,32 @@
         }
     }
     .mmm_content {
-        #productList {
-            .category-title {
-                background-color: #fff;
+        position: relative;
+        top: 90px;
+        margin-bottom: 100px;
+        .navlist {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            text-align: center;
+            a {
+                width: 30%;
+                text-indent: 20px;
                 position: relative;
-                top: 75px;
-                margin-bottom: 20px;
-                >.breadcrumb {
-                    // padding-top: 10px;
-                    padding-left: 14px;
-                    display: flex;
-                    background-color: #eee;
-                    >li {
-                        height: 30px;
-                        font-size: 13px;
-                        line-height: 30px;
-                        a {
-                            color: #333;
-                            font-size: 13px;
-                        }
-                        &::before {
-                            content: "";
-                        }
-                        &::after {
-                            content: ">";
-                        }
-                    }
-                }
-                >.btn-default {
+                display: inline-block;
+                padding: 6px;
+                border: 1px solid #333;
+                font-size: 13px;
+                color: #333;
+                background-color: #eee;
+                margin-bottom: 15px;
+                img {
                     position: absolute;
-                    right: 10px;
-                    top: 6px;
-                    display: block;
-                    padding: 0 10px;
-                    font-size: 12px;
-                    line-height: 20px;
-                    border: 1px solid #333;
-                    border-radius: 10px;
-                    background-color: #ddd;
-                    color: #333;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-45px,-50%);
                 }
             }
-            >.product-list {
-                margin-bottom: 50px;
-                >.media {
-                    padding: 10px;
-                    border-bottom: 1px solid #ccc;
-                    display: flex;
-                    position: relative;
-                    top: 45px;
-                    >a {
-                        flex: 1;
-                        img {
-                            height: 100%;
-                            width: 100%;
-                        }
-                    }
-                    >.media-body {
-                        margin-left: 10px;
-                        flex: 3;
-                        >.price {
-                            color: #e92322;
-                        }
-                        >em {
-                            font-size: 12px;
-                            color: #666;
-                            &:last-child {
-                                margin-left: 10px;
-                            }
-                        }
-                    }
-                }
-            }
-            
         }
     }
     .mmm_footer {
@@ -171,4 +124,4 @@
             }
         }
     }
-    }
+}
