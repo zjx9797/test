@@ -2,8 +2,6 @@
 .layout {
   width: 100vw;
   height: 100vh;
-  max-width: 640px;
-  min-width: 320px;
   margin: 0 auto;
   background-color: #eee;
 }
@@ -13,6 +11,7 @@
   background-color: #f60;
   display: flex;
   position: fixed;
+  z-index: 998;
 }
 .layout .mmm_header .ioc {
   width: 50px;
