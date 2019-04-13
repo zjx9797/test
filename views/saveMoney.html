@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../styles/saveMoney.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="mmm_layout">
+        <div class="mmm_header">
+            <div class="logo">
+                <h1>
+                    <a href="https://m.manmanbuy.com/"><img src="../static/images/mlogo.png"></a>
+                </h1>
+            </div>
+            <div class="searchbox">
+                <form action="Search" method="get">
+                    <span class="mui-icon mui-icon-search"></span>
+                    <input type="text" name="key" placeholder="商品比价、查历史价">
+                </form>
+            </div>
+            <div class="download"><a target="_blank" href="https://at.umeng.com/onelink/Pvmmmy">下载</a></div>
+        </div>
+        <div class="scroller">
+            <ul class="clearfix">
+                <li><a href="https://m.manmanbuy.com/" class="on">首页</a></li>
+                <li><a href="cuxiao.aspx">省钱控</a></li>
+                <li><a href="http://tool.manmanbuy.com/m/history.aspx">查历史价</a></li>
+                <li><a href="listclass.aspx">比价搜索</a></li>
+                <li><a href="guoneizhekou.aspx">国内折扣</a></li>
+                <li><a href="http://baicai.manmanbuy.com/m/index.aspx">白菜价</a></li>
+                <li><a href="http://m.manmanbuy.com/defaultsharehot.aspx">商城商标</a></li>
+            </ul>
+        </div>
+        <div class="mmm_content">
+            <div class="mmm_list">
+            </div>
+            <div class="paging">
+                <!-- <input type="button" value="上一页" class="btn btn-default pull-left"> -->
+                <a href="#" class="mui-btn page-prev">上一页</a>
+                <a href="#" class="mui-btn page-page">第1页</a>
+                <a href="#" class="mui-btn page-next">下一页</a>
+                <!-- <input type="button" value="下一页" class="btn btn-default pull-right"> -->
+            </div>
+        </div>
+        <div class="mmm_footer">
+            <div class="foot_top">
+                <a href="login.aspx">登录</a>
+                <a href="reg.aspx">注册</a>
+                <a href="#" style="width: 40%;">
+                    <img src="../static/images/top.jpg" width="15" height="15">返回顶部
+                </a>
+            </div>
+            <div class="footer">
+                <p>
+                    <a href="https://at.umeng.com/onelink/Pvmmmy" onclick="trackEvent('footer下载');"
+                        style="color: Red;">手机APP下载</a> <a href="http://m.manmanbuy.com">
+                        慢慢买手机版</a> -- 掌上比价平台</p>
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </div>
+    </div>
+    <script type="text/template" id="PolicyTemp">
+        {{each result value index}}
+        <div class="media">
+                <a class="media-left" href="#">
+                    {{@value.productImgSm}}
+                </a>
+                <div class="media-body">
+                    <div class='Description'><a href="moneyproduct.html?productid={{value.productId}}">{{value.productName}}</a></div>
+                    <div class="price">{{value.productPinkage}}包邮</div>
+                    <span class="from">{{value.productFrom}} | {{value.productTime}}</span>
+                    <span class="comment"><i class="mui-icon mui-icon-chatboxes"></i>{{value.productComCount}}</span>
+                </div>
+            </div>
+            {{/each}}
+    </script>
+</body>
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../js/register.js"></script>
+<script src="../js/saveMoney.js"></script>
+
+</html>
