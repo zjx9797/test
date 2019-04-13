@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- 框架样式表 -->
+  <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+  <!-- MUI扩展字体图标 -->
+  <link rel="stylesheet" href="./lib/fontawesome/css/font-mui-icons-extra.css">
+  <!-- 页面样式表 -->
+  <link rel="stylesheet" href="./styles/page.css">
+  <link rel="stylesheet" href="./styles/index.css">
+  <title>慢慢买</title>
+</head>
+
+<body>
+  <div class="mmm_layout">
+    <!-- 页面头部 -->
+    <div class="mmm_header">
+      <div class="logo">
+        <h1>
+          <a href="./index.html"><img src="./images/mlogo.png"></a>
+        </h1>
+      </div>
+      <div class="searchbox">
+        <form action="Search" method="get">
+          <span class="mui-icon mui-icon-search"></span>
+          <input type="text" name="key" placeholder="商品比价、查历史价">
+        </form>
+      </div>
+      <div class="download"><a target="_blank" href="https://at.umeng.com/onelink/Pvmmmy">下载</a></div>
+    </div>
+    <!-- 页面内容 -->
+    <div class="mmm_content">
+      <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+          <!--这里放置真实显示的DOM内容-->
+          <div class="menu">
+            <ul>
+
+            </ul>
+          </div>
+          <!-- 连接 省钱控限时优惠 -->
+          <a href="#">
+            <div class="jxhd" style="margin-top: 4px;">
+              <span>超值折扣推荐</span><img src="./images/more.png">
+            </div>
+          </a>
+          <div class="details">
+            <ul>
+
+            </ul>
+          </div>
+          <div id="ctl00_foot">
+            <div class="foot_top">
+              <a href="login.aspx">登录</a> <a href="reg.aspx">注册</a>
+              <a href="#" style="width: 40%; border: 0;">
+                <img src="../images/top.jpg" width="15" height="15">返回顶部</a>
+            </div>
+            <div class="footer">
+              <p>
+                <a href="https://at.umeng.com/onelink/Pvmmmy" onclick="trackEvent('footer下载');"
+                  style="color: Red;">手机APP下载</a> <a href="../index.html">
+                  慢慢买手机版</a> -- 掌上比价平台</p>
+              <p>
+                m.manmanbuy.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+
+</html>
+<script type="text/template" id="menuTemp">
+  {{each result value index}}
+    <li>
+      <a href="./views/{{value.titlehref}}">
+        {{@value.img}}
+        <p>{{value.name}}</p>
+      </a>
+    </li>
+  {{/each}}
+</script>
+<script type="text/template" id="detailsTemp">
+  {{each result value index}}
+    <li>
+      <a href="#">
+        <div class="details_img">
+          {{@value.productImg2}}
+        </div>
+        <div class="details_name">
+            <p>
+              {{value.productName}}
+            </p>
+            <p>
+              {{value.productPinkage}}
+            </p>
+            <p>
+              {{value.productFrom}} | {{value.productTime}}
+            </p>
+        </div>
+      </a>
+    </li>
+  {{/each}}
+</script>
+<!-- 引入框架js -->
+<script src="./lib/mui/js/mui.js"></script>
+<!-- 引入js库 -->
+<script src="./lib/zepto/zepto.js"></script>
+<!-- 引入渲染模板js -->
+<script src="./lib/arttemplate/template-web.js"></script>
+<!-- 引入ajax拦截器 -->
+<script src="./js/common.js"></script>
+<!-- 引入页面业务js -->
+<script src="./js/index.js"></script>

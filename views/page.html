@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+  <link rel="stylesheet" href="../styles/page.css">
+</head>
+
+<body>
+  <div class="mmm_layout">
+    <div class="mmm_header">
+      <div class="logo">
+        <h1>
+          <a href="../index.html"><img src="../images/mlogo.png"></a>
+        </h1>
+      </div>
+      <div class="searchbox">
+        <form action="Search" method="get">
+          <span class="mui-icon mui-icon-search"></span>
+          <input type="text" name="key" placeholder="商品比价、查历史价">
+        </form>
+      </div>
+      <div class="download"><a target="_blank" href="https://at.umeng.com/onelink/Pvmmmy">下载</a></div>
+    </div>
+    <div class="mmm_content">
+      <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+          <!--这里放置真实显示的DOM内容-->
+          <!-- 面包屑导航 -->
+          <div class="crumbs">
+            <ul class="breadcrumb">
+              <li>
+                <a href="#">
+                  <span class="text ">商品排名</span>
+                </a>
+              </li>
+              <li>
+                <a href="./brandTitle.html">
+                  <span class="text ">品牌大全</span>
+                </a>
+              </li>
+              <li>
+                <a href="../index.html">
+                  <span class="icon ">首页</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="border">
+            <h4>平板电视哪个好</h4>
+          </div>
+          <div class="list">
+            <ul>
+
+
+
+            </ul>
+          </div>
+          <div class="border">
+            <h4>平板电视哪个好</h4>
+          </div>
+          <div class="top_list">
+            <ul>
+
+            </ul>
+          </div>
+          <div class="border">
+            <h4>平板电视哪个好</h4>
+          </div>
+          <div class="discuss">
+            <ul>
+
+            </ul>
+          </div>
+          <div id="ctl00_foot">
+            <div class="foot_top">
+              <a href="login.aspx">登录</a> <a href="reg.aspx">注册</a>
+              <a href="#" style="width: 40%; border: 0;">
+                <img src="../images/top.jpg" width="15" height="15">返回顶部</a>
+            </div>
+            <div class="footer">
+              <p>
+                <a href="https://at.umeng.com/onelink/Pvmmmy" onclick="trackEvent('footer下载');"
+                  style="color: Red;">手机APP下载</a> <a href="../index.html">
+                  慢慢买手机版</a> -- 掌上比价平台</p>
+              <p>
+                m.manmanbuy.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mmm_footer">
+
+    </div>
+  </div>
+  <script type="text/template" id="listTemp">
+    {{each result value index}}
+      <li>
+        <a href="?brandtitleid={{value.brandId}}">
+        <span >{{index+1}}</span>
+          <div class="list_name">
+            <p>{{value.brandName}}</p>
+            <p>{{value.brandInfo}}</p>
+          </div>
+        </a>
+      </li>
+    {{/each}}
+  </script>
+  <script type="text/template" id="topTemp">
+    {{each result value index}}
+    <li>
+      <a href="#">
+        <div class="details_img">
+          {{@value.productImg}}
+        </div>
+        <div class="details_name">
+            <p>
+              {{value.productName}}
+            </p>
+            <p>
+              {{value.productPrice}}
+            </p>
+            <p data-id="{{value.productId}}">
+              {{value.productQuote}} | {{value.productCom}}
+            </p>
+        </div>
+      </a>
+    </li>
+  {{/each}}
+</script>
+  <script type="text/template" id="discussTemp">
+    {{each result value index}}
+    <li>
+      <a href="#">
+        <div class="details_img">
+          
+        </div>
+        <div class="details_name">
+          <p>
+            乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视
+          </p>
+        </div>
+      </a>
+      <div class="plbox"><a href="discomment.aspx?id=67825&amp;cid=973783">
+          <div class="name">{{value.comName}}：<span class="star"><em class="star5"></em></span><i>{{value.comTime}}</i></div>
+          <div class="con">
+            {{value.comContent}}
+          </div>
+        </a></div>
+    </li>
+  {{/each}}
+</script>
+  <script src="../lib/mui/js/mui.min.js"></script>
+  <script src="../lib/zepto/zepto.js"></script>
+  <script src="../lib/arttemplate/template-web.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/page.js"></script>
+</body>
+
+</html>
