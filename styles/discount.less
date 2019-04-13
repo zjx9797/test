@@ -1,0 +1,84 @@
+@import './reset';
+@import './common.css';
+
+.mmm_layout {
+    display: flex;
+    flex-direction: column;
+}
+
+.mmm_content {
+    flex: 1;
+    position: relative;
+    top: 75px;
+    margin:0px 0 60px 0; 
+    // padding: 10px;
+    >ul {
+        display: flex;
+        flex-wrap: wrap;
+        >.border-img {
+            padding:5px;
+            width: 47%;
+            margin: 5px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #eee;
+            background-color: #fff;
+            a {
+                width: 100%;
+                height: 100%;
+                display: block;
+
+                .img {
+                    // width: 140px;
+                    // height: 140px;
+                    margin: 5px auto;
+
+                    img {
+                        width: 90%;
+                    }
+                }
+
+                .title {
+                    color: #333333;
+                    word-break: break-all;
+                    padding: 0 8px;
+                    font-size: 14px;
+                    text-align: left;
+                    text-align-last: left;
+                    line-height: 18px;
+                    height: 36px;
+                    word-break: break-all;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+
+                .subtit {
+                    color: #ff6c00;
+                    margin-top: 4px;
+                    font-size: 14px;
+                    padding: 0 8px;
+                    text-align: left;
+                    text-align-last: left;
+                    word-break: break-all;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    height: 18px;
+                    line-height: 18px;
+                }
+
+                .info {
+                    padding: 6px 8px ;
+                    .mall {
+                        color: #a1a1a1;
+                        font-size: 12px;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
